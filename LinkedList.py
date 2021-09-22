@@ -21,7 +21,15 @@ class LinkedList:
             current = current.next
 
     def insertFirst( self, val ):
-        pass
+        newNode = Node( val )
+        if self.head == None:
+            self.head = newNode
+        else:
+            current = self.head
+            while current.next != None:
+                current = current.next
+            current.next = newNode
 
     def findNode( self, val ):
-        pass
+        if current.next != None:
+            print(current.next)
