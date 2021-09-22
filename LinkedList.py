@@ -29,5 +29,7 @@ class LinkedList:
             self.head = newNode
 
     def findNode( self, val ):#Do this one
-        if current.next != None:
-            print(current.next)
+        current = self.head
+        while current.val != val:
+            current = current.next
+        print(f"Node Found => {current.val}")
