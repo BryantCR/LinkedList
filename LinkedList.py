@@ -25,11 +25,9 @@ class LinkedList:
         if self.head == None:
             self.head = newNode
         else:
-            current = self.head
-            while current.next != None:
-                current = current.next
-            current.next = newNode
+            newNode.next = self.head
+            self.head = newNode
 
-    def findNode( self, val ):
+    def findNode( self, val ):#Do this one
         if current.next != None:
             print(current.next)
