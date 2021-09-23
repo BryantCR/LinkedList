@@ -13,4 +13,6 @@ listOfNumbers.insertFirst(50)
 listOfNumbers.insertFirst(30)
 listOfNumbers.insertFirst(20)
 listOfNumbers.printList()
+#listOfNumbers.findNode(30)
+listOfNumbers.deleteNode(50)
 
