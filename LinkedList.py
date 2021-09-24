@@ -44,25 +44,84 @@ class LinkedList:
     #         current = current.next
     #     return None
 
-    def deleteNode(self, val):
-        print(f"deleteNode method is looking for the Node => {val}")
+    # def deleteNode(self, val):
+    #     print(f"deleteNode method is looking for the Node => {val}")
+    #     current = self.head
+    #     previous = self.head
+    #     print(self.head.val)
+    #     print(current.val)
+    #     print(val)
+
+    #     if self.head.val == val:
+    #         self.head = self.head.next
+    #         current.next = None
+    #     else:
+    #     while current != None and current.val != val:
+    #         print(current.val)
+    #         print(val)
+    #         previous = current
+    #         current = current.next
+    #     print(f"Node Found => {current.val}")
+
+    #         if current != None:
+    #             previous.next = current.next
+    #             current.next = None
+    def deleteNode( self, val ):
+        if self.head == None:
+            return None
         current = self.head
         previous = self.head
-        print(self.head.val)
-        print(current.val)
-        print(val)
-
-        if self.head == val:
-            self.head 0 self.head.next
+        if self.head.val == val:
+            self.head = self.head.next
             current.next = None
-
-        while current != None and current.val != val:
-            print(current.val)
-            print(val)
-            previous = current
-            current = current.next
-        print(f"Node Found => {current.val}")
-
+        else:
+            while current != None and current.val != val:
+                previous = current
+                current = current.next
             if current != None:
                 previous.next = current.next
                 current.next = None
+    
+    # Validate the index, that it exists in the list (lenght() counts how many elements we have)
+    #def countNodes():
+    #    count = 0
+    #    if self.head == None:
+    #        count = 0
+    #    else:
+    #        count = count + 1
+    # Move along the list until the given index to add it
+    # If list is empty do not add if the index is not 0
+    # def insertAtPosition(self, val1, val2):
+    #     if self.head == None:
+    #         return None
+    #     else:
+    #         self.findNode( val1 )
+    #         newNode = Node( val2 )
+    #         current = self.head
+    #         while current.next != None:
+    #             current = current.next
+    #         current.next = newNode
+
+def length( self ):
+        current = self.head
+        count = 0
+        while current != None:
+            count += 1
+            current = current.next
+        return count
+
+    def insertAtPosition( self, index, val ):
+        newNode = Node( val )
+        if index <= self.length():
+            if index == 0:
+                self.insertFirst( val )
+            else:
+                count = 0
+                current = self.head
+                while count < index - 1:
+                    count += 1
+                    current = current.next
+                newNode.next = current.next
+                current.next = newNode
+
+
