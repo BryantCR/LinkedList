@@ -102,7 +102,7 @@ class LinkedList:
     #             current = current.next
     #         current.next = newNode
 
-def length( self ):
+    def length( self ):
         current = self.head
         count = 0
         while current != None:
