@@ -124,4 +124,28 @@ class LinkedList:
                 newNode.next = current.next
                 current.next = newNode
 
+# Find the maximun value inside a list of numbers and move it to the last node
+    def findMaximumValueNode( self, val2 ):
+        listOfNodes = val2[0]
+        for i in val2:
+            if i > listOfNodes:
+                listOfNodes = i
+                
+        print(listOfNodes)
+        
+        # count = 0
+        # if self.head == None:
+        #     count = 0
+        #     else:
+        #         count = count + 1
+
+        # if self.head == None:
+        #     return None
+        #     else:
+        #         newNode = Node( val2 )
+        #         current = self.head
+        #         while current.next != None:
+        #             current = current.next
+        #         current.next = newNode
+# Find the minimum value inside a list of numbers and move it to the head of the list
 

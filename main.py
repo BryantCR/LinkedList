@@ -18,11 +18,15 @@ listOfNumbers = LinkedList()
 #listOfNumbers.insertAtPosition(30, 10)
 #listOfNumbers.printList()
 
-listOfNumbers.insertLast( 10 )
-listOfNumbers.insertLast( 5 )
-listOfNumbers.insertLast( 20 )
-listOfNumbers.insertLast( 15 )
-listOfNumbers.insertLast( 30 )
+# listOfNumbers.insertLast( 10 )
+# listOfNumbers.insertLast( 5 )
+# listOfNumbers.insertLast( 20 )
+# listOfNumbers.insertLast( 15 )
+# listOfNumbers.insertLast( 30 )
 
-listOfNumbers.insertAtPosition( 5, 50 )
+listOfNewNodes = listOfNumbers.insertLast( 30 ).insertLast( 20 ).insertLast( 50 )
+
+# listOfNumbers.insertAtPosition( 5, 50 )
 listOfNumbers.printList()
+
+listOfNumbers.findMaximumValueNode(listOfNewNodes)
