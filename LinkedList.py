@@ -124,14 +124,43 @@ class LinkedList:
                 newNode.next = current.next
                 current.next = newNode
 
+    def moveHighestToLast( self ):
+        if self.length() > 1:
+            max = self.head
+            current = self.head
+            prevToMax = self.head
+            prevToCurrent = self.head
+            
+            while current.next != None:
+                prevToCurrent = current
+                current = current.next
+                if current.val > max.val:
+                    max = current
+                    prevToMax = prevToCurrent
+
+            if self.head.val == max.val:
+                self.head = self.head.next
+            if max.val != current.val:
+                prevToMax.next = max.next
+                current.next = max
+                max.next = None
+    # def bubbleSort(num):
+    #     if i in range (0, len(num), -1)
+    #         for n in range (i):
+    #             if num[n] > num[n+1]
+    #                 temp = nun[n]
+    #                 num[n] = num[n+1]
+    #                 num[n+1] = temp
+
+
 # Find the maximun value inside a list of numbers and move it to the last node
-    def findMaximumValueNode( self, val2 ):
-        listOfNodes = val2[0]
-        for i in val2:
-            if i > listOfNodes:
-                listOfNodes = i
+    # def findMaximumValueNode( self, val2 ):
+    #     listOfNodes = val2[0]
+    #     for i in val2:
+    #         if i > listOfNodes:
+    #             listOfNodes = i
                 
-        print(listOfNodes)
+    #     print(listOfNodes)
         
         # count = 0
         # if self.head == None:
