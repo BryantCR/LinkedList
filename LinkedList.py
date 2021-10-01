@@ -144,13 +144,23 @@ class LinkedList:
                 prevToMax.next = max.next
                 current.next = max
                 max.next = None
-    # def bubbleSort(num):
-    #     if i in range (0, len(num), -1)
-    #         for n in range (i):
-    #             if num[n] > num[n+1]
-    #                 temp = nun[n]
-    #                 num[n] = num[n+1]
-    #                 num[n+1] = temp
+
+    def bubbleSort(self, num):
+        for i in range (0, len(num) -1, 1):
+            for n in range (1 +1, len(num), 1):
+                if num[n] > num[n+1]:
+                    temp = nun[n]
+                    num[n] = num[n+1]
+                    num[n+1] = temp
+
+    def removeNegativeNumbers(self, listes):
+        positiveNumbers = []
+        for i in range (0, len(listes) ,1):
+            if listes[i] > 0:
+                positiveNumbers.append(listes[i])
+            listes = positiveNumbers
+            print(listes)
+
 
 
 # Find the maximun value inside a list of numbers and move it to the last node

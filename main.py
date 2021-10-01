@@ -34,3 +34,9 @@ listOfNumbers = LinkedList()
 # listOfNumbers.moveHighestToLast()
 
 # listOfNumbers.printList()
+
+# You will have to write a function called removeNegatives
+# The function should remove all the negative values in a linked list
+# The function should return the linked list
+listes = [1,2,5,-7,8,-9,55]
+listOfNumbers.removeNegativeNumbers(listes)
